@@ -4,9 +4,10 @@ from django.db import models
 class User(models.Model):
     """ユーザモデル"""
 
-    id = models.AutoField(primary_key=True)
+    slack_id = models.CharField(max_length=100, unique=True)
     name = models.CharField(max_length=100)
-    email = models.EmailField(max_length=255, null=True, blank=True)
+    image_url = models.URLField(null=True, blank=True)
+    is_bot = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name

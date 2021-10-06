@@ -1,7 +1,18 @@
 import os
 
+try:
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings.local')
+    from django import setup
+    setup()
+except:
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings.production')
+    from django import setup
+    setup()
+
+
 from slack import WebClient
 
+from slack_work_out.models import User
 
 try:
     import slack_information
@@ -10,15 +21,23 @@ except:
     OAUTH_TOKEN = os.environ.get('OAUTH_TOKEN')
 
 
-def collect_user():
+def insert_user():
     client = WebClient(token=OAUTH_TOKEN)
     res = client.users_list()
     for member in res['members']:
-        print(member['id'])
+        if member['id'] == 'USLACKBOT' or member['is_bot']:
+            continue
         profile = member['profile']
-        print(profile['display_name'])
+        obj, created = User.objects.get_or_create(
+            slack_id=member['id'],
+            name=profile['display_name'],
+            image_url=profile['image_72'],
+            is_bot=member['is_bot']
+        )
+        print(obj)
+        print(created)
 
 
 if __name__ == "__main__":
-    collect_user()
+    insert_user()
 

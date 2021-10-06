@@ -31,7 +31,7 @@ except:
 def date_query():
     """昨日のデータを取得"""
     today = date.today()
-    yesterday = today - dt.timedelta(days=1) + dt.timedelta(days=1)
+    yesterday = today - dt.timedelta(days=1)
     topic_data = WorkOut.objects.filter(training_at__date=yesterday)
     return topic_data
 

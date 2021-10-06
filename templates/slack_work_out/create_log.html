@@ -1,0 +1,19 @@
+{% extends 'slack_work_out/base.html' %}
+{% load widget_tweaks %}
+
+{% block content %}
+<div class="card text-center contact mx-auto rounded">
+    <div class="card-body">
+        <h2 class="mb-4">トレーニング記録</h2>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="mb-3">
+                {% render_field form.user class='form-control' placeholder='name' %}
+            </div>
+            <div class="mt-4 mb-3">
+                <button class="btn btn-warning" type="submit"><i class="fas fa-paper-plane"> 記録する</i></button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

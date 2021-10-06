@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang='ja'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>WorkSchedule</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <h1><a href="/" class="nav-motion nav-link nav-color">Training Log</a></h1>
+        </div>
+    </nav>
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer class="py-4 bg-dark text-center">
+        <small class="text-white">&copy; 2021 Namba Koya</small>
+    </footer>
+    {% block extra_js %}
+    {% endblock %}
+</body>
+</html>

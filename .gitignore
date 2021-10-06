@@ -127,3 +127,12 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# 追加
+*.pyc
+.DS_Store
+media
+
+config/settings/local.py
+staticfiles/
+slack_information.py

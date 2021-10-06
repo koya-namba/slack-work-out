@@ -1,0 +1,15 @@
+{% extends 'slack_work_out/base.html' %}
+{% load widget_tweaks %}
+
+{% block content %}
+<div class="card text-center contact mx-auto rounded">
+    <div class="card-body">
+        <h2 class="mb-4">トレーニング記録</h2>
+    </div>
+</div>
+{% endblock %}
+{% block extra_js %}
+setTimeout(function(){
+    window.location.href = 'localhost:8000';
+}, 5*1000);
+{% endblock %}

@@ -26,7 +26,7 @@ def insert_user():
     client = WebClient(token=OAUTH_TOKEN)
     res = client.users_list()
     for member in res['members']:
-        if member['id'] == 'USLACKBOT' or member['is_bot']:
+        if member['id'] == 'USLACKBOT' or member['is_bot'] or not member['profile']['display_name'] or member['deleted']:
             continue
         profile = member['profile']
         obj, created = User.objects.get_or_create(

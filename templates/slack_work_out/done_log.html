@@ -1,22 +1,25 @@
 {% extends 'slack_work_out/base.html' %}
 {% load widget_tweaks %}
 
+{% block add_meta %}
+<META http-equiv="refresh" content="3; url=https://slack-work-out.herokuapp.com/">
+{% endblock %}
 {% block content %}
 <div class="card text-center contact mx-auto rounded">
     <div class="card-body">
         <h2 class="mb-4">トレーニング記録</h2>
-        <a href="/" class="nav-motion nav-link nav-color"><i class="fas"> 戻る</i></a>
+        <a href="/" class="mt-2 mb-4"><i class="fas"> 戻る</i></a>
     </div>
 </div>
 {% endblock %}
-{% block extra_js %}
-waitTimer = 3;
-url = "https://slack-work-out.herokuapp.com/";
-function jumpPage() {
-    location.href = url;
-}
-setTimeout("jumpPage()", waitTimer*1000)
-<!--setTimeout(function(){-->
-<!--    window.location.href = 'https://slack-work-out.herokuapp.com/';-->
-<!--}, 5*1000);-->
-{% endblock %}
+<!--{% block extra_js %}-->
+<!--waitTimer = 3;-->
+<!--url = "https://slack-work-out.herokuapp.com/";-->
+<!--function jumpPage() {-->
+<!--    location.href = url;-->
+<!--}-->
+<!--setTimeout("jumpPage()", waitTimer*1000)-->
+<!--&lt;!&ndash;setTimeout(function(){&ndash;&gt;-->
+<!--&lt;!&ndash;    window.location.href = 'https://slack-work-out.herokuapp.com/';&ndash;&gt;-->
+<!--&lt;!&ndash;}, 5*1000);&ndash;&gt;-->
+<!--{% endblock %}-->

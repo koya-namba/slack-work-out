@@ -14,12 +14,12 @@
 
 研究室には，このように懸垂マシンが導入されています．
 
-![IMG_1674](https://user-images.githubusercontent.com/82089820/136354169-ee4b1802-fc5f-420c-96ea-2b957227b3d8.jpg)
+<img height="800" alt="IMG_1674" src="https://user-images.githubusercontent.com/82089820/136354169-ee4b1802-fc5f-420c-96ea-2b957227b3d8.jpg">
 
 
 以前は紙で記録を行なっていましたが，これをアプリ化しました．
 
-![IMG_1675](https://user-images.githubusercontent.com/82089820/136354801-d5b36f6c-959b-43bf-83e3-cbd6b946d281.jpg)
+<img width="525" alt='IMG_1675' src="https://user-images.githubusercontent.com/82089820/136354801-d5b36f6c-959b-43bf-83e3-cbd6b946d281.jpg">
 
 トレーニングする前に名前を選択して，記録ボタンを押すだけでよくなりました．
 

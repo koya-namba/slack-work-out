@@ -4,7 +4,7 @@ from .models import WorkOut
 
 
 class CreateLogForm(forms.ModelForm):
-    """管理者がarticleを作成するフォーム"""
+    """記録を作成するフォーム"""
 
     class Meta:
         model = WorkOut

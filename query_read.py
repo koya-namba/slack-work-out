@@ -41,4 +41,3 @@ def insert_user():
 
 if __name__ == "__main__":
     insert_user()
-

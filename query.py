@@ -31,7 +31,7 @@ except:
 def date_query():
     """昨日のデータを取得"""
     today = date.today()
-    yesterday = today - dt.timedelta(days=1) + dt.timedelta(days=1)
+    yesterday = today - dt.timedelta(days=1)
     topic_data = WorkOut.objects.filter(training_at__date=yesterday)
     return topic_data
 
@@ -49,7 +49,7 @@ def sort_query(topic_data):
 def create_json(work_out_sort):
     """Slackに送信するjsonを作成"""
     today = date.today()
-    yesterday = today - dt.timedelta(days=1) + dt.timedelta(days=1)
+    yesterday = today - dt.timedelta(days=1)
     yesterday = yesterday.strftime('%Y/%m/%d')
     # タイトルの作成
     title = f":muscle: {yesterday}のトレーニングデータ :muscle:"

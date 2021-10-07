@@ -9,7 +9,7 @@ from .models import WorkOut
 class CreateLogView(CreateView):
     """筋トレlogを作成するView"""
 
-    model = WorkOut
+    model = WorkOut.objects.all().order_by('user__name')
     template_name = 'slack_work_out/create_log.html'
     form_class = CreateLogForm
     success_url = reverse_lazy('slack_work_out:done_log')
@@ -19,4 +19,5 @@ class CreateLogView(CreateView):
 
 
 class DoneLogView(TemplateView):
+    """送信完了View"""
     template_name = 'slack_work_out/done_log.html'

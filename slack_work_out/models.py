@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models.functions import Lower
 
 
 class User(models.Model):
@@ -8,6 +9,9 @@ class User(models.Model):
     name = models.CharField(max_length=100)
     image_url = models.URLField(null=True, blank=True)
     is_bot = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = [Lower('name'), ]
 
     def __str__(self):
         return self.name

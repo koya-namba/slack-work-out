@@ -14,7 +14,7 @@
 
 研究室には，このように懸垂マシンが導入されています．
 
-<img height="800" alt="IMG_1674" src="https://user-images.githubusercontent.com/82089820/136354169-ee4b1802-fc5f-420c-96ea-2b957227b3d8.jpg">
+<img height="500" alt="IMG_1674" src="https://user-images.githubusercontent.com/82089820/136354169-ee4b1802-fc5f-420c-96ea-2b957227b3d8.jpg">
 
 
 以前は紙で記録を行なっていましたが，これをアプリ化しました．
